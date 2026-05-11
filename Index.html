@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aizak</title>
+
+  <style>
+
+    h1, p, .menu a {
+  text-shadow:
+    0 0 2px rgba(0,0,0,0.8),
+    0 0 6px rgba(0,0,0,0.6);
+}
+
+.menu a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.1);
+  opacity: 0;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.menu a:hover::before {
+  opacity: 1;
+}
+
+  .main-text {
+  width: 400px;
+  margin-left: 6%;
+  margin-top: 20vh;
+  text-align: left;
+}
+
+.audio-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.audio-controls button {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  font-family: 'MyFont';
+  cursor: pointer;
+}
+
+.audio-controls input {
+  width: 80px;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/Century Gothic Italic.ttf');
+}
+
+    body {
+      margin: 0;
+      background: black;
+      color: rgb(255, 255, 255);
+      font-family: 'MyFont', sans-serif;
+      letter-spacing: 10px;
+      text-align: left;
+    }
+
+    video {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+    h1 {
+      font-size: 100px;
+      letter-spacing: 10px;
+    }
+
+    .menu {
+      margin-top: 40px;
+    }
+
+    .menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 20px;
+      opacity: 0.7;
+    }
+
+    .menu a:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+
+<audio id="bg-music" autoplay loop>
+  <source src="Muzika/bg-music.wav" type="audio/wav">
+</audio>
+
+<div class="audio-controls">
+  <button id="muteBtn">mute</button>
+  <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+</div>
+
+<script>
+const music = document.getElementById("bg-music");
+const muteBtn = document.getElementById("muteBtn");
+const volumeSlider = document.getElementById("volumeSlider");
+
+// default volume
+music.volume = 0.2;
+volumeSlider.value = 0.2;
+
+// mute toggle
+muteBtn.onclick = () => {
+  music.muted = !music.muted;
+  muteBtn.textContent = music.muted ? "unmute" : "mute";
+};
+
+// volume control
+volumeSlider.oninput = () => {
+  music.volume = volumeSlider.value;
+};
+</script>
+
+<video autoplay muted loop playsinline>
+    <source src="Video/bg.mp4" type="video/mp4">
+  </video>
+
+
+  <div class="main-text">
+  <h1>AIZAK</h1>
+  <p>"Aizak" is an electronic music focused project created by Rokas Miceika. "Aizak" is focused on raw energy, emotion, and immersive soundscapes, drawing influence from dance, rave and experimental electronic scenes.</p>
+
+  <div class="menu">
+    
+    <a href="music.html">music</a>
+    <a href="Visuals.html">visuals</a>
+    <a href="contact.html">contact</a>
+  </div>
+</div>
+</body>
+
+</html>

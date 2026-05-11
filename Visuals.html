@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visuals</title>
+
+  <style>
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/Century Gothic Italic.ttf');
+}
+
+
+    body {
+      margin: 0;
+      background: black;
+    }
+
+    /* 👇 your stacked column */
+    .feed {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .feed img,
+    .feed video {
+      width: 100%;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-family: 'MyFont', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔙 back to main page -->
+  <a href="index.html" class="back">:[</a>
+
+  <!-- 🎬 your visual feed -->
+  <div class="feed">
+
+    <img src="Nuotraukos/image.png">
+
+    <video autoplay muted loop playsinline>
+      <source src="Video/bg.mp4" type="video/mp4">
+    </video>
+
+    <img src="Nuotraukos/WIN_20250523_23_44_41_Pro.jpg">
+
+    <video autoplay muted loop playsinline>
+      <source src="Video/delay.mp4" type="video/mp4">
+    </video>
+
+    <video autoplay muted loop playsinline>
+      <source src="Video/muzika.mp4" type="video/mp4">
+    </video>
+
+    <img src="Nuotraukos/ginklas.JPG">
+
+    <img src="Nuotraukos/ginglas2.JPG">
+
+    <video autoplay muted loop playsinline>
+      <source src="Video/merga.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+</body>
+</html>

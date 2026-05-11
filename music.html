@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>music</title>
+
+<style>
+
+/* optional back button */
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-family: 'MyFont', sans-serif;
+    }
+
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/Century Gothic Italic.ttf');
+}
+
+  body {
+
+
+    
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: 'MyFont', sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 40px 0;
+    letter-spacing: 10px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .track {
+    border: 1px solid white;
+    padding: 15px;
+  }
+
+  .track h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+  }
+
+  audio {
+    width: 100%;
+    filter: invert(1); /* makes it white on black */
+  }
+</style>
+</head>
+
+<body>
+
+<!-- 🔙 back to main page -->
+  <a href="index.html" class="back">:[</a>
+
+<h1>MUSIC</h1>
+
+<div class="grid">
+
+  <div class="track">
+    <h2>Dance</h2>
+    <audio controls>
+      <source src="Muzika/Dance.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <div class="track">
+    <h2>Almbience</h2>
+    <audio controls>
+      <source src="Muzika/bg-music.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <div class="track">
+    <h2>Think</h2>
+    <audio controls>
+      <source src="Muzika/think.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+
+  <style>
+
+    #copyText {
+  cursor: pointer;
+}
+
+    @font-face {
+  font-family: 'MyFont';
+  src: url('fonts/Century Gothic Italic.ttf');
+}
+
+/* optional back button */
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-family: 'MyFont', sans-serif;
+    }
+
+    body {
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/Century Gothic Italic.ttf');
+}
+
+      background: black;
+      color: white;
+      font-family: 'MyFont';
+      text-align: center;
+      margin-top: 30vh;
+    }
+
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-size: 24px;
+      opacity: 0.7;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+<!-- 🔙 back to main page -->
+  <a href="index.html" class="back">:[</a>
+
+  <a href="https://www.instagram.com/aizak_klp/" target="_blank">Instagram</a>
+  <a href="https://www.youtube.com/@nervuspatampyk" target="_blank">YouTube</a>
+  <a href="https://on.soundcloud.com/RGwU34GOHv5yB6Lhlt" target="_blank">SoundCloud</a>
+  <p id="copyText">aizakaizakaizakaizak@gmail.com</p>
+
+<script>
+
+
+const text = document.getElementById("copyText");
+
+
+
+text.onclick = () => {
+  navigator.clipboard.writeText("aizakaizakaizakaizak@gmail.com");
+  text.textContent = "copied!";
+};
+</script>
+  
+</body>
+</html>
