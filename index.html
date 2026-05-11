@@ -34,14 +34,17 @@
 
   .main-text {
   position: absolute;
-  left: 6%;
+
+  left: 5%;
   top: 50%;
+
   transform: translateY(-50%);
-  
-  width: 30vw;
-  min-width: 300px;
+
+  width: 22vw;
+  min-width: 320px;
 
   text-align: left;
+
   z-index: 2;
 }
 
@@ -66,17 +69,35 @@
     video {
   position: fixed;
   top: 0;
-  left: 40%;
-  width: 60%;
-  height: 100%;
+  left: 30%;
+
+  width: 70%;
+  height: 100vh;
+
   object-fit: cover;
+
+  z-index: -2;
+}
+
+    body::before {
+  content: "";
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 30%;
+  height: 100vh;
+
+  background: black;
+
   z-index: -1;
 }
 
     h1 {
-      font-size: 6vw;
-      letter-spacing: 10px;
-    }
+  font-size: clamp(60px, 6vw, 120px);
+  letter-spacing: 10px;
+}
 
     .menu {
       margin-top: 40px;
